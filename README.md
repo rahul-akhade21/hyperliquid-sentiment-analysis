@@ -37,7 +37,9 @@ pip install -r requirements.txt
 
 # Run the analysis
 python analysis.py
-📊 Visualizations Generated
+
+
+## 📊 Visualizations Generated
 pnl_by_sentiment.png - PnL distribution by sentiment
 
 whale_vs_small.png - Whale vs retail trader comparison
