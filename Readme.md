@@ -68,11 +68,19 @@ text
 ### Step 1: Install Dependencies
 ```bash
 pip install -r requirements.txt
+
+---
+
 Step 2: Run the Analysis
 bash
 python analysis.py
+
+---
+
 Step 3: View Results
 Check the console output for summary statistics
+
+---
 
 Open the visualizations/ folder for charts
 
