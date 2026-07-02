@@ -42,119 +42,106 @@ Sentiment effect is strongest during US trading hours (13:00-21:00 IST)
 
 ---
 
-## 📁 Repository Structure
-hyperliquid-sentiment-analysis/
-│
-├── README.md # This file
-├── analysis.py # Python script (run this)
-├── requirements.txt # Python dependencies
-│
-├── fear_greed_index.csv # Sentiment data
-├── historical_data.csv # Trade data
-│
-└── visualizations/ # Created when you run the script
-├── pnl_by_sentiment.png
-├── whale_vs_small.png
-├── session_analysis.png
-├── correlation_matrix.png
-└── size_tier_analysis.png
-
-text
-
----
-
 ## 🚀 How to Run
 
-### Step 1: Install Dependencies
-```bash
+## Step 1: Install Dependencies
 pip install -r requirements.txt
 
----
-
-Step 2: Run the Analysis
-bash
+## Step 2: Run the Analysis
 python analysis.py
 
----
-
-Step 3: View Results
+## Step 3: View Results
 Check the console output for summary statistics
 
 ---
 
-Open the visualizations/ folder for charts
+## 📊 Visualizations Generated
+### File	Description
+**pnl_by_sentiment.png:** Boxplot showing PnL distribution across sentiment regimes 
 
-📊 Visualizations Generated
-File	Description
-pnl_by_sentiment.png	Boxplot showing PnL distribution across sentiment regimes
-whale_vs_small.png	Bar chart comparing Whale vs Small trader performance
-session_analysis.png	PnL breakdown by trading session and sentiment
-correlation_matrix.png	Heatmap of feature relationships
-size_tier_analysis.png	PnL by position size and sentiment
-🛠️ Technologies Used
-Python 3.8+
+**whale_vs_small.png:** Bar chart comparing Whale vs Small trader performance 
 
-Pandas - Data manipulation and analysis
+**session_analysis.png:** PnL breakdown by trading session and sentiment
 
-NumPy - Numerical operations
+**correlation_matrix.png:** Heatmap of feature relationships 
 
-Matplotlib/Seaborn - Data visualization
+**size_tier_analysis.png:** PnL by position size and sentiment
 
-SciPy - Statistical testing (Mann-Whitney U, Spearman correlation)
+---
 
-📈 Methodology
-Data Cleaning: Parse timestamps, remove dust conversions, handle missing values
+## 🛠️ Technologies Used
+**Python 3.8+**
 
-Feature Engineering: Create sentiment scores, profitability flags, trader types
+**Pandas -** Data manipulation and analysis
 
-Statistical Analysis: Mann-Whitney U tests, Spearman correlation
+**NumPy -** Numerical operations
 
-Segmentation: Analyze by trader type, position size, and trading session
+**Matplotlib/Seaborn -** Data visualization
 
-Strategy Backtesting: Test contrarian trading strategy
+**SciPy -** Statistical testing (Mann-Whitney U, Spearman correlation)
 
-🔬 Statistical Results
-Test	Value	Interpretation
-Spearman Correlation	-0.42	Strong negative relationship
-Fear vs Greed p-value	0.000003	Highly significant
-Fear vs Extreme Greed p-value	0.000001	Highly significant
-Strategy Win Rate	68%	Statistically robust
-💡 Trading Recommendations
-BUY when sentiment = Fear/Extreme Fear
+---
 
-SELL/SHORT when sentiment = Greed/Extreme Greed
+## 📈 Methodology
+**Data Cleaning:** Parse timestamps, remove dust conversions, handle missing values
 
-Focus on US session (13:00-21:00 IST)
+**Feature Engineering:** Create sentiment scores, profitability flags, trader types
 
-Follow whales: they buy Fear, sell Greed
+**Statistical Analysis:** Mann-Whitney U tests, Spearman correlation
 
-Scale position size in Fear regimes
+**Segmentation:** Analyze by trader type, position size, and trading session
 
-📝 Conclusion
-The data clearly shows that market sentiment is a powerful contrarian indicator.
+**Strategy Backtesting:** Test contrarian trading strategy
 
-Best performance occurs in Fear regimes
+---
 
-Worst performance occurs in Greed regimes
+## 🔬 Statistical Results
 
-Whales are the smart money, buying fear and selling greed
+**Spearman Correlation:**	-0.42(Strong negative relationship)
 
-Position size matters - larger trades work best in Fear
+**Fear vs Greed p-value:**	0.000003(Highly significant)
 
-A simple contrarian strategy outperforms by 5x
+**Fear vs Extreme Greed p-value:**	0.000001(Highly significant)
 
-Key Insight for Traders:
+**Strategy Win Rate:**	68%(Statistically robust)
 
-"Be fearful when others are greedy, and greedy when others are fearful" - Warren Buffett
+---
 
-👤 Author
+## 💡 Trading Recommendations
+
+1. BUY when sentiment = Fear/Extreme Fear
+ 
+2. SELL/SHORT when sentiment = Greed/Extreme Greed
+
+3. Focus on US session (13:00-21:00 IST)
+
+4. Follow whales: they buy Fear, sell Greed
+ 
+5. Scale position size in Fear regimes
+
+---
+
+## 📝 Conclusion
+1. The data clearly shows that market sentiment is a powerful contrarian indicator.
+  
+2. Best performance occurs in Fear regimes
+  
+3. Worst performance occurs in Greed regimes
+
+4. Whales are the smart money, buying fear and selling greed
+
+5. Position size matters - larger trades work best in Fear
+
+6. A simple contrarian strategy outperforms by 5x
+
+---
+
+## Key Insight for Traders:
+
+**"Be fearful when others are greedy, and greedy when others are fearful" - Warren Buffett**
+
+---
+
+## 👤 Author
 Rahul Akhade
 
-📅 Submission Details
-Assignment: Hyperliquid Trader Performance Analysis
-
-Date: 2nd July 2026
-
-Status: Complete ✅
-
-Hiring Process: First Step (Shortlisting)
