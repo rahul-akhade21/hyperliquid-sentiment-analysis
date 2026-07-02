@@ -1,4 +1,3 @@
-markdown
 # Hyperliquid Trader Performance vs. Market Sentiment Analysis
 
 ## 📊 Project Overview
@@ -66,28 +65,16 @@ text
 
 ## 🚀 How to Run
 
-### Option 1: Local Machine
-
-1. **Clone the repository**
+### Step 1: Install Dependencies
 ```bash
-git clone https://github.com/YOUR_USERNAME/hyperliquid-sentiment-analysis.git
-cd hyperliquid-sentiment-analysis
-Install dependencies
-
-bash
 pip install -r requirements.txt
-Run the analysis
-
+Step 2: Run the Analysis
 bash
 python analysis.py
-Option 2: Google Colab
-Go to colab.research.google.com
+Step 3: View Results
+Check the console output for summary statistics
 
-Upload analysis.py
-
-Upload your CSV files
-
-Run the script
+Open the visualizations/ folder for charts
 
 📊 Visualizations Generated
 File	Description
@@ -108,36 +95,15 @@ Matplotlib/Seaborn - Data visualization
 SciPy - Statistical testing (Mann-Whitney U, Spearman correlation)
 
 📈 Methodology
-Data Cleaning
-Parsed timestamp columns
+Data Cleaning: Parse timestamps, remove dust conversions, handle missing values
 
-Removed dust conversions (PnL = 0)
+Feature Engineering: Create sentiment scores, profitability flags, trader types
 
-Handled missing values
+Statistical Analysis: Mann-Whitney U tests, Spearman correlation
 
-Merged sentiment and trade data on date
+Segmentation: Analyze by trader type, position size, and trading session
 
-Feature Engineering
-Created numeric sentiment scores
-
-Added profitability flag
-
-Categorized trader types (Whale vs. Small)
-
-Extracted trading sessions (Asia/Europe/US)
-
-Created position size tiers
-
-Analysis Steps
-Sentiment vs. PnL summary statistics
-
-Statistical validation (Mann-Whitney U test)
-
-Segmentation by trader type and size
-
-Time-of-day analysis
-
-Strategy backtesting
+Strategy Backtesting: Test contrarian trading strategy
 
 🔬 Statistical Results
 Test	Value	Interpretation
@@ -146,28 +112,15 @@ Fear vs Greed p-value	0.000003	Highly significant
 Fear vs Extreme Greed p-value	0.000001	Highly significant
 Strategy Win Rate	68%	Statistically robust
 💡 Trading Recommendations
-Strategy 1: Contrarian Sentiment Strategy
-Buy when sentiment = Fear/Extreme Fear
+BUY when sentiment = Fear/Extreme Fear
 
-Sell/Short when sentiment = Greed/Extreme Greed
+SELL/SHORT when sentiment = Greed/Extreme Greed
 
-Expected Win Rate: ~68%
+Focus on US session (13:00-21:00 IST)
 
-Best for: US session (13:00-21:00 IST)
+Follow whales: they buy Fear, sell Greed
 
-Strategy 2: Follow the Smart Money
-Monitor: Whale net positions
-
-Signal: Buy when whales buy in Fear, sell when whales sell in Greed
-
-Rationale: Whales consistently outperform
-
-Strategy 3: Size Scaling
-In Fear: Scale up position size (>$10k)
-
-In Greed: Scale down position size (<$1k)
-
-Rationale: Larger sizes work best in Fear regimes
+Scale position size in Fear regimes
 
 📝 Conclusion
 The data clearly shows that market sentiment is a powerful contrarian indicator.
@@ -189,11 +142,10 @@ Key Insight for Traders:
 👤 Author
 Rahul Akhade
 
-
 📅 Submission Details
 Assignment: Hyperliquid Trader Performance Analysis
 
-Date: July 2026
+Date: 2nd July 2026
 
 Status: Complete ✅
 
